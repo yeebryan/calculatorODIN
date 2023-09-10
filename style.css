@@ -1,0 +1,47 @@
+.calculator {
+  display: grid;
+  grid-template-rows: auto 1fr; /* First row for display, second row for buttons */
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.display {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Vertically center the display */
+  justify-content: flex-end; /* Right-align the text in the display */
+  padding: 10px; /* Add padding to the display */
+  height: 100px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  gap: 5px; /* Add a small gap between buttons */
+}
+
+button {
+  font-size: 24px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Make buttons span the full width of each column */
+  height: 100px; /* Set a fixed height for all buttons */
+}
+
+.clear-button {
+  grid-column-end: span 4; /* Span across all 4 columns */
+  height: 60px; /* override button's height due to specificity */
+}
+
+button:hover {
+  background-color: #555;
+}
